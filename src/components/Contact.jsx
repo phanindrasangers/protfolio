@@ -195,7 +195,7 @@ export default function Contact() {
             Reach out directly and I'll get back to you within 24 hours.
           </p>
           <motion.a
-            href="mailto:phanindra.sangers@improving.com"
+            href="mailto:phanindra.sangers@gmail.com"
             whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(124,58,237,0.4)' }}
             style={{
               display: 'inline-block',
@@ -207,7 +207,7 @@ export default function Contact() {
               fontSize: '0.95rem',
             }}
           >
-            phanindra.sangers@improving.com
+            phanindra.sangers@gmail.com
           </motion.a>
         </motion.div>
 

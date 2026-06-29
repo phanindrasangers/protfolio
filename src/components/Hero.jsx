@@ -84,7 +84,7 @@ export default function Hero() {
         className="section-container"
         style={{ position: 'relative', zIndex: 1, width: '100%' }}
       >
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+        <div className="hero-grid">
           {/* Left: Text */}
           <div>
             <motion.div
@@ -179,6 +179,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
+              className="hero-cta-row"
               style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}
             >
               <Link to="blogs" smooth duration={600} offset={-80}>
@@ -225,6 +226,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
+              className="hero-social-row"
               style={{ display: 'flex', gap: '1rem' }}
             >
               {socialLinks.map((s) => (
@@ -260,13 +262,7 @@ export default function Hero() {
             animate="float"
             style={{ display: 'flex', justifyContent: 'center' }}
           >
-            <div
-              style={{
-                position: 'relative',
-                width: '320px',
-                height: '320px',
-              }}
-            >
+            <div className="hero-avatar">
               {/* Glowing ring */}
               <motion.div
                 animate={{ rotate: 360 }}
@@ -312,6 +308,7 @@ export default function Hero() {
 
               {/* Kubestronaut badge floating */}
               <motion.div
+                className="hero-float-badge"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.8, type: 'spring' }}
@@ -334,6 +331,7 @@ export default function Hero() {
               </motion.div>
 
               <motion.div
+                className="hero-float-badge"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 1.0, type: 'spring' }}
@@ -359,6 +357,7 @@ export default function Hero() {
 
         {/* Scroll indicator */}
         <motion.div
+          className="hero-scroll-hint"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}

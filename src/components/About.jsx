@@ -86,7 +86,7 @@ export default function About() {
           </h2>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
+        <div className="about-grid">
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -107,7 +107,7 @@ export default function About() {
             </p>
 
             {/* Highlight cards */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div className="highlight-grid">
               {highlights.map((h, i) => (
                 <motion.div
                   key={h.title}
